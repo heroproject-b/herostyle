@@ -7,8 +7,51 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Noto+Sans+Arabic:wght@400;500&family=Noto+Sans:wght@400;500&display=swap">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .construction-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            color: white;
+            text-align: center;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        
+        .construction-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .construction-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .construction-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
+    <!-- Under Construction Overlay -->
+    <div class="construction-overlay">
+        <div class="construction-content">
+            <h2>Under Construction</h2>
+            <p>We're currently working on something amazing! Our website will be launching soon.</p>
+        </div>
+    </div>
+
     <!-- Theme Toggle -->
     <button class="theme-toggle" aria-label="Toggle theme">
         <span class="sun">☀️</span>

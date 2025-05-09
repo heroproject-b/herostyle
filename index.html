@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Shimshali</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Noto+Sans+Arabic:wght@400;500&family=Noto+Sans:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
+
+    <div class="content-card">
+        <!-- Top Section: Photo -->
+        <div class="top-section">
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/hero-profile.jpg" alt="Hero Shimshali">
+                </div>
+            </div>
+            
+            <div class="language-options">
+                <button class="language-btn" data-lang="en">English</button>
+                <button class="language-btn" data-lang="fa">فارسی</button>
+                <button class="language-btn" data-lang="ku">کوردی</button>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Description -->
+        <div class="bottom-section">
+            <div class="name-slider">
+                <h2 class="hero-name active" data-lang="en">Hero Shimshali</h2>
+                <h2 class="hero-name" data-lang="fa">هیرو شمشالی</h2>
+                <h2 class="hero-name" data-lang="ku">هیرۆ شمشالی</h2>
+            </div>
+            <div class="kurdish-motif"></div>
+            
+            <!-- Quote Slider -->
+            <div class="quote-slider">
+                <div class="quote-slides">
+                    <div class="quote active" data-lang="en">
+                        <div class="quote-content">"Kurdish designer weaving heritage into contemporary fashion. Each piece flows like the mountain winds, with patterns that dance between tradition and modernity."</div>
+                    </div>
+                    <div class="quote" data-lang="fa">
+                        <div class="quote-content">"طراح کردی که میراث را در مد معاصر می‌بافد. هر قطعه مانند بادهای کوهستانی جریان دارد، با طرح‌هایی که بین سنت و مدرنیته می‌رقصند."</div>
+                    </div>
+                    <div class="quote" data-lang="ku">
+                        <div class="quote-content">"دیزاینەری کورد کە کەلەپووری دەگەیەنێتە ناو فاشیۆنی هاوچەرخ. هەر بەشێک وەک باوەکانی شاخەکان دەڕوات، بە نەخشەکانێ کە سەما دەکەن لە نێوان نەریت و مۆدێرنیدا."</div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-lang="en"></span>
+                    <span class="dot" data-lang="fa"></span>
+                    <span class="dot" data-lang="ku"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

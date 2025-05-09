@@ -1,0 +1,42 @@
+.animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.wave-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--size, 200px);
+    height: var(--size, 200px);
+    margin-left: calc(-1 * var(--size, 200px) / 2);
+    margin-top: calc(-1 * var(--size, 200px) / 2);
+    background: #888; /* Filled plate */
+    border-radius: 50%;
+    opacity: 0.15; /* Semi-transparent fill */
+    animation: 
+        circleFade 4s infinite ease-out,
+        circleRotate 20s infinite linear;
+    animation-delay: var(--delay, 0s);
+    transform-origin: center;
+    border: none; /* Remove border */
+}
+
+/* Adjusted sizes for filled plates */
+.wave-circle:nth-child(1) { --size: 240px; opacity: 0.1; }
+.wave-circle:nth-child(2) { --size: 260px; opacity: 0.07; }
+.wave-circle:nth-child(3) { --size: 280px; opacity: 0.05; }
+
+@keyframes circleFade {
+    0%, 100% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: var(--opacity); } /* Use CSS variable */
+}
+
+[data-theme="dark"] .wave-circle {
+    background: #aaa; /* Lighter gray for dark mode */
+}

@@ -1,0 +1,24 @@
+[data-theme="dark"] {
+    --kurdish-red: #c44e4e;
+    --kurdish-blue: #3d7cb6;
+    --kurdish-gold: #e8c252;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+[data-theme="dark"] .content-card,
+[data-theme="dark"] .bottom-section {
+    background: #1e1e1e;
+}
+
+[data-theme="dark"] .top-section {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] .designer-description {
+    color: rgba(255,255,255,0.9);
+}

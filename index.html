@@ -5,8 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero Shimshadi</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Noto+Sans+Arabic:wght@400;500&family=Noto+Sans:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Add these new styles */
+        .social-sidebar {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 10;
+        }
+        
+        .social-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px 0 0 25px;
+            background-color: #6C5CE7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .social-button.instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        
+        .social-button.contact {
+            background-color: #2D3436;
+        }
+        
+        .social-button .icon {
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-button .label {
+            position: absolute;
+            right: 60px;
+            white-space: nowrap;
+            background-color: inherit;
+            padding: 0 15px;
+            border-radius: 25px 0 0 25px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .social-button:hover {
+            width: 150px;
+        }
+        
+        .social-button:hover .label {
+            opacity: 1;
+            right: 50px;
+        }
+        
+        .content-card {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
     <!-- Theme Toggle -->
@@ -16,6 +87,18 @@
     </button>
 
     <div class="content-card">
+        <!-- Social Sidebar -->
+        <div class="social-sidebar">
+            <a href="https://instagram.com/yourinstagram" target="_blank" class="social-button instagram">
+                <i class="fab fa-instagram icon"></i>
+                <span class="label">Instagram</span>
+            </a>
+            <a href="mailto:contact@heroshimshadi.com" class="social-button contact">
+                <i class="fas fa-envelope icon"></i>
+                <span class="label">Contact</span>
+            </a>
+        </div>
+
         <!-- Top Section: Photo -->
         <div class="top-section">
             <div class="photo-wrapper">

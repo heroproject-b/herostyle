@@ -3,112 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Shimshali</title>
+    <title>Hero Shimshadi</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Noto+Sans+Arabic:wght@400;500&family=Noto+Sans:wght@400;500&display=swap">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .construction-overlay {
+        .under-construction {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.85);
+            color: white;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            color: white;
-            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            padding: 20px;
         }
         
-        .construction-content {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .under-construction h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
         
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
+        .under-construction p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .construction-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .continue-btn {
+            background-color: #fff;
+            color: #000;
             border: none;
-            color: white;
-            font-size: 1.5rem;
+            padding: 10px 20px;
+            font-size: 1rem;
             cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 50%;
+            border-radius: 5px;
             transition: all 0.3s ease;
         }
         
-        .close-btn:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: rotate(90deg);
-        }
-        
-        .construction-content h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        
-        .construction-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-        
-        .hidden {
-            display: none !important;
+        .continue-btn:hover {
+            background-color: #ddd;
         }
     </style>
 </head>
 <body>
     <!-- Under Construction Overlay -->
-    <div class="construction-overlay" id="constructionOverlay">
-        <div class="construction-content">
-            <button class="close-btn" id="closeOverlay">×</button>
-            <h2>Under Construction</h2>
-            <p>We're currently working on something amazing! Our website will be launching soon.</p>
-            <p><small>Click the X to view the current site</small></p>
-        </div>
+    <div class="under-construction">
+        <div class="construction-icon">🚧</div>
+        <h1>Under Construction</h1>
+        <p>We're currently working on this website to bring you an amazing experience. Please check back soon!</p>
+        <button class="continue-btn" onclick="document.querySelector('.under-construction').style.display='none'">Continue to Site</button>
     </div>
 
-    <!-- Rest of your existing HTML content -->
+    <!-- Theme Toggle -->
     <button class="theme-toggle" aria-label="Toggle theme">
         <span class="sun">☀️</span>
         <span class="moon">🌙</span>
     </button>
 
     <div class="content-card">
-        <!-- Your existing content here -->
+        <!-- Top Section: Photo -->
+        <div class="top-section">
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/hero-profile.jpg" alt="Hero Shimshadi">
+                </div>
+            </div>
+            
+            <div class="language-options">
+                <button class="language-btn" data-lang="en">English</button>
+                <button class="language-btn" data-lang="fa">فارسی</button>
+                <button class="language-btn" data-lang="ku">کوردی</button>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Description -->
+        <div class="bottom-section">
+            <div class="name-slider">
+                <h2 class="hero-name active" data-lang="en">Hero Shimshadi</h2>
+                <h2 class="hero-name" data-lang="fa">هیرو شمشادی</h2>
+                <h2 class="hero-name" data-lang="ku">ھێرۆ شمشادی</h2>
+            </div>
+            <div class="kurdish-motif"></div>
+            
+            <!-- Quote Slider -->
+            <div class="quote-slider">
+                <div class="quote-slides">
+                    <div class="quote active" data-lang="en">
+                        <div class="quote-content">"Kurdish designer weaving heritage into contemporary fashion. Each piece flows like the mountain winds, with patterns that dance between tradition and modernity."</div>
+                    </div>
+                    <div class="quote" data-lang="fa">
+                        <div class="quote-content">"طراح کوردی که میراث را در مد معاصر می‌بافد. هر قطعه مانند بادهای کوهستانی جریان دارد، با طرح‌هایی که بین سنت و مدرنیته می‌رقصند."</div>
+                    </div>
+                    <div class="quote" data-lang="ku">
+                        <div class="quote-content">"دیزاینەری کورد کە کەلەپووری دەگەیەنێتە ناو فاشیۆنی هاوچەرخ. هەر بەشێک وەک باوەکانی شاخەکان دەڕوات، بە نەخشەکانێ کە سەما دەکەن لە نێوان نەریت و مۆدێرنیدا."</div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-lang="en"></span>
+                    <span class="dot" data-lang="fa"></span>
+                    <span class="dot" data-lang="ku"></span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script>
-        // Close overlay functionality
-        document.getElementById('closeOverlay').addEventListener('click', function() {
-            document.getElementById('constructionOverlay').classList.add('hidden');
-            
-            // Optional: Store in localStorage so it doesn't reappear on refresh
-            localStorage.setItem('overlayClosed', 'true');
-        });
-        
-        // Optional: Check localStorage on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('overlayClosed') === 'true') {
-                document.getElementById('constructionOverlay').classList.add('hidden');
-            }
-        });
-    </script>
-
-    <!-- Your existing scripts -->
     <script src="js/theme-switcher.js"></script>
     <script src="js/language-switcher.js"></script>
     <script src="js/slider.js"></script>
